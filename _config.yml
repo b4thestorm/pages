@@ -29,7 +29,9 @@ markdown: kramdown
 theme: alembic-jekyll-theme
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
   - jekyll-sitemap
+remote_theme: daviddarnes/alembic
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
