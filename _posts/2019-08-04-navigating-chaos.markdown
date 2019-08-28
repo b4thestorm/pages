@@ -2,6 +2,8 @@
 layout: post
 title: 'Navigating Chaos'
 categories: musings
+permalink: /navigating-chaos
+description: How I handled Java with no experience
 ---
 
 I was tasked with writing a script to interact with private api in Java. I am
@@ -38,4 +40,4 @@ What does that mean? Luckily for me, Eclipse is a blessing because if you hover 
 I learned fundamental things: how to setup a java dev environment, how to set a variable, how to include a jar,
 how to start a loop, how to import classes. These are rudimentary, but critical dev pain points.
 
-My biggest takeaway from this experience was the realization that I could start from the end to learn the components of Java. This is just one language, but it is quite amazing that in only 10 hours I was able to become comfortable with looking at and writing Java. You could go to school forever and never become comfortable and I was able to pull it off in a matter of a few super focused hours, with the simple direction of having a problem I wanted/needed to solve. Traditionally, we are taught component by component and then we are off to the races. But this experience taught me something very interesting. That learning component by component is cool, but navigating chaos (unfamiliar territory) is faster and more efficient if you're aim is to learn. So I just wanted to share that takeaway. 
+My biggest takeaway from this experience was the realization that I could start from the end to learn the components of Java. This is just one language, but it is quite amazing that in only 10 hours I was able to become comfortable with looking at and writing Java. You could go to school forever and never become comfortable and I was able to pull it off in a matter of a few super focused hours, with the simple direction of having a problem I wanted/needed to solve. Traditionally, we are taught component by component and then we are off to the races. But this experience taught me something very interesting. That learning component by component is cool, but navigating chaos (unfamiliar territory) is faster and more efficient if you're aim is to learn. So I just wanted to share that takeaway.

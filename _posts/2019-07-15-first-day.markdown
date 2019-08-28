@@ -2,10 +2,9 @@
 layout: post
 title: 'Remembering My First Day'
 categories: musings
+permalink: /first-day
+description: First day in startup lala land
 ---
-
-Remembering My First Day
-
 
 This is a post I wrote to myself on October 13th 2014 on my First day at the Startup Institute. I feel it’s always good to look back at where you are coming from. If not for learning then at the very least, its good for the feelings of Nostalgia.
 Day 1
