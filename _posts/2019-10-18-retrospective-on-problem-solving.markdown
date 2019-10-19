@@ -31,7 +31,49 @@ on stackoverflow, I had discovered my understanding of how setInterval and setTi
 Turns out, I had moved my manipulate the dom code in the setTimeout but after setTimeout ends
 setInterval is run again. I simply needed to move my manipulate the dom code down by one line
 out of the setTimeout function and then it would run. 6 hours of my life, gone because my
-understanding of setTimout/ setInterval had not been up to part.
+understanding of setTimout/ setInterval had not been up to part. This is how I initially wrote the
+code.
+
+```js
+//wrong way to use setTimeout
+var interval = setInterval(function(){
+    //check that the button says 'Following'
+     var grabButton = win.document.querySelector('button:hksud')
+
+       var startTimeout= setTimeout(function(){
+         win.document.querySelector("body > div.RnEpo.Yx5HN > div > div > div.mt3GC > button.aOOlW.-Cab_").click()
+          alert('was successful');
+       }, 100);
+       clearTimeout(startTimeout)
+     //moves on at 61secs
+     win.location = base + handles[i];
+     if (i++ > 2) {
+       clearInterval(interval);
+     }  
+   }, 60000)
+```
+
+This is what worked for me in the end:
+
+```js
+//correct way to use setTimeout
+var interval = setIntervalfunction(){
+    //check that the button says 'Following'
+     var grabButton = win.document.querySelector('button:hksud')
+
+       var startTimeout= setTimeout(function(){
+          alert('was successful');
+       }, 100);
+       clearTimeout(startTimeout)
+    //clicks at 61 secs
+     win.document.querySelector("body > div.RnEpo.Yx5HN > div > div > div.mt3GC > button.aOOlW.-Cab_").click()
+
+     win.location = base + handles[i];
+     if (i++ > 2) {
+       clearInterval(interval);
+     }
+   }, 60000)
+```
 
 This blog post is actually my attempt on going over perhaps a system that I could employ for the
 next time I face a technical block, where my knowledge of a system is simply not up to part. If there
@@ -39,11 +81,17 @@ was anything I would do differently the next time, I'd say there is probably a f
 researching the problem space that I'd want to consider doing next time. Here is my few items:
 
 • define the effects I am witnessing
+
 • clarify what I know 100% - in terms of all functions involved
+
 • clarify what I do not know 100% - in terms of all functions involved
+
 • get skeptical if I intuit that I will have to learn an entire new space in programming
+
 • create a thought experiment replicating the success case of the function/method in question
+
 • use pencil/paper to write down all solution attempts
+
 • know that I will solve it - no matter what
 
 I'll probably write more as I solve more and more problems. But the purpose of writing this
