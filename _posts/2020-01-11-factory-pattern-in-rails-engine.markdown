@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'name this pattern'
+title: 'Interesting implementation of the Factory Pattern'
 categories: ruby
 permalink: /factory-pattern-in-rails
 description: Walk through of an interesting Factory pattern in rails
