@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Inspecting network traffic'
-categories: networking
+categories: programming
 permalink: /network-traffic
 description: Inspecting router activity
 ---
