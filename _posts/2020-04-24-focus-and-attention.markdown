@@ -15,7 +15,9 @@ and it's ability to allocate attention.
 
 Here are the 3 ideas I will briefly muse about:
 • Todo Lists are biological structures for selecting attention
+
 • Showers are great ways to refocus your attention
+
 • Do not create a goal in a mood
 
 1. Todo Lists are biological structures for selecting attention
@@ -25,8 +27,11 @@ that you perceive. It's operation while you are awake is largely geared towards
 handling things you do through time. It's often hard for people to accurately gauge
 how long they will be able to take to perform any and most operations. Thus we've learned
 different modes of handling those operations.
+
    a. don't handle time, let time handle you
+
    b. create a calendar and work at handling time through it
+
    c. create a todo list each day and work from there
 
 Because time in a day is limited. Because the mind without any concrete goal has a tendency
@@ -48,6 +53,6 @@ that leads you to stop everything. Perhaps you can restart your mind by taking a
 going for a walk in the park.
 
 3. Do not create a goal in a mood
-This is important to not do. I suspect that long term goals are useless. Not that you shouldn't have
+This is important not to do. I suspect that long term goals are useless. Not that you shouldn't have
 them, but that you shouldn't start anything with it. Still trying to figure this out but this is what
 I have so far.  
