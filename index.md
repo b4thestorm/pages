@@ -8,21 +8,55 @@ layout: jekyll-theme-minimal
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500&display=swap" rel="stylesheet">
 </head>
 <style>
+  #blog-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #resource-container {
+      display: flex;
+      flex-direction: column;
+  }
+
+  #project-container {
+    display: flex;
+    flex-direction: 'row';
+    left: -50;
+  }
+
+  .header {
+    font-family: 'Raleway', sans-serif;
+  }
+
+  li {
+    font-size: 24px;
+  }
+
   li > a {
     color: black;
+    text-decoration: underline solid red;
+  }
+
+  #slide-1 {
+    margin-bottom: 50;
+  }
+
+  #slide-2 {
+    margin-left: 10px;
+    margin-bottom: 50;
+  }
+
+  #main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
 
   #hero {
     width: 100%;
     height: 50%;
-    transition: background-color .75s ease;
     background-color: #fff;
     padding: 10px;
-  }
-
-  #hero:hover{
-   background-color: #fc0;
-   color: white;
   }
 
   #hero p {
@@ -33,13 +67,11 @@ layout: jekyll-theme-minimal
 
   #twitter {
     position: relative;
-    left: 90%;
-    top: 120px;
-    visibility: hidden;
+    top: 10;
   }
 
-  #hero:hover > a > #twitter {
-    visibility: visible;
+  #list {
+    list-style: none;
   }
 
   @media only screen
@@ -47,25 +79,41 @@ layout: jekyll-theme-minimal
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2) {
    .hero {
-     margin-bottom: 50px;
-   }   
+     margin-bottom: 100px;
+   }
  }
 
 
 
 </style>
 <div id='hero'>
-  <p>Hi, I'm Arnold. I build things rapidly. I specialize in rapid prototype iteration, web design and making connections. I aim to create memorable digital experiences and provide fast and reliable service to all of my clients.</p>
-  <a href="https://twitter.com/Arnold_SandersR">
-  <img src="https://b4thestorm.github.io/pages/assets/images/twitter-logo@logotyp.us.svg" width="50px;" id="twitter"></a>
+  <p>Hi, I'm Arnold. I specialize in rapid prototype iteration, web development and making connections. I aim to create memorable digital experiences and provide fast and reliable service to all of my clients.<span><a href="https://twitter.com/Arnold_SandersR">
+    <img src="https://b4thestorm.github.io/pages/assets/images/twitter-logo@logotyp.us.svg" width="50px;" id="twitter"></a></span></p>
+  <div id='main-container'>
+    <img src="../pages/assets/images/ME.jpg" height="500px">
+    <div id="resource-container">
+    <h1 class="header">Projects</h1>
+    <div id="project-container">
+      <div class="overlay">
+        <div id="slide-1">
+          <img src="../pages/assets/images/InstaGarden-LOGO-A.jpg" height="305px"/>
+        </div>
+      </div>
+      <div id="slide-2">
+        <img src="../pages/assets/images/proj1_a.png" width="150px;"/>
+        <img src="../pages/assets/images/proj1_b.png" height="303px" width="150px;"/>
+      </div>
+    </div>
+    <div id="blog-container">
+      <h1 class="header">Blog</h1>
+      <ul id='list'>
+        {% for post in site.posts %}
+          <li>
+            <a href="{{ post.url }}" id='list-item'>{{ post.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  </div>
 </div>
-<center>
-<h1 style="font-family: 'Raleway', sans-serif;">Blog</h1>
-<ul style="list-style: none;">
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}" style="text-decoration-color: red;">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
-</center>
