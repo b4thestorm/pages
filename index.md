@@ -51,12 +51,25 @@ layout: jekyll-theme-minimal
     flex-direction: row;
     justify-content: space-around;
   }
+  #fancy-design {
+      position: absolute;
+      top: 50%;
+      opacity: .1;
+      width: 100%;
+      height: 50%;
+      background-color: #add8e6;
+      clip-path: polygon(0 0, 0 4%, 100% 50%, 100% 100%, 0 100%, 0% 50%);
+  }
 
   #hero {
     width: 100%;
     height: 50%;
     background-color: #fff;
     padding: 10px;
+  }
+
+  #overlay {
+    clip-path: polygon(0 100%, 0 0, 100% 0, 30% 50)
   }
 
   #hero p {
@@ -89,9 +102,11 @@ layout: jekyll-theme-minimal
 <div id='hero'>
   <p>Hi, I'm Arnold. I specialize in web development and making connections. I aim to create memorable digital experiences and provide fast and reliable service to all of my clients.<span><a href="https://twitter.com/Arnold_SandersR">
     <img src="https://b4thestorm.github.io/pages/assets/images/twitter-logo@logotyp.us.svg" width="50px;" id="twitter"></a></span></p>
+  <div id='fancy-design'>
+  </div>
   <div id='main-container'>
     <img src="../pages/assets/images/ME.jpg" height="500px">
-    <div id="resource-container">
+    <div id="resource-container" style="z-index: 1">
     <h1 class="header">Projects</h1>
     <div id="project-container">
       <div class="overlay">
