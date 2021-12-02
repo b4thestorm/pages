@@ -87,7 +87,7 @@ layout: jekyll-theme-minimal
 
 </style>
 <div id='hero'>
-  <p>Hi, I'm Arnold. I specialize in rapid prototype iteration, web development and making connections. I aim to create memorable digital experiences and provide fast and reliable service to all of my clients.<span><a href="https://twitter.com/Arnold_SandersR">
+  <p>Hi, I'm Arnold. I specialize in web development and making connections. I aim to create memorable digital experiences and provide fast and reliable service to all of my clients.<span><a href="https://twitter.com/Arnold_SandersR">
     <img src="https://b4thestorm.github.io/pages/assets/images/twitter-logo@logotyp.us.svg" width="50px;" id="twitter"></a></span></p>
   <div id='main-container'>
     <img src="../pages/assets/images/ME.jpg" height="500px">
@@ -109,7 +109,7 @@ layout: jekyll-theme-minimal
       <ul id='list'>
         {% for post in site.posts %}
           <li>
-            <a href="{{ post.url }}" id='list-item'>{{ post.title }}</a>
+            <a href="../pages/{{ post.url }}" id='list-item'>{{ post.title }}</a>
           </li>
         {% endfor %}
       </ul>
