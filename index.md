@@ -6,6 +6,14 @@ layout: jekyll-theme-minimal
 ---
 <head>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GTLELQLE4F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GTLELQLE4F');
+</script>
 </head>
 <style>
   #blog-container {
