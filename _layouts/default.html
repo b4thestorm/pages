@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTLELQLE4F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
+      gtag('config', 'G-GTLELQLE4F');
+    </script>
 {% seo %}
     <link rel="stylesheet" href="{{ "https://b4thestorm.github.io/pages/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <!--[if lt IE 9]>
@@ -53,14 +60,6 @@
     <script src="{{ "/pages/assets/js/scale.fix.js" | relative_url }}"></script>
     <!-- {% if site.google_analytics %} -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTLELQLE4F"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-GTLELQLE4F');
-    </script>
     <!-- {% endif %} -->
   </body>
 </html>
