@@ -5,6 +5,7 @@
 layout: jekyll-theme-minimal
 ---
 <head>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500&display=swap" rel="stylesheet">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTLELQLE4F"></script>
 <script>
@@ -16,6 +17,22 @@ layout: jekyll-theme-minimal
 </script>
 </head>
 <style>
+ .container {
+    display: flex;
+    height: 100%;
+    width: 800px;
+    margin: auto;
+  }
+
+  #main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    border-left: 2px solid #ff00f0;
+    border-right: 2px solid #ff00f0;
+  }
+
   #blog-container {
     display: flex;
     flex-direction: column;
@@ -28,12 +45,15 @@ layout: jekyll-theme-minimal
 
   #project-container {
     display: flex;
-    flex-direction: 'row';
+    flex-direction: row;
     left: -50;
   }
 
-  .header {
+  .topic {
+    color: #ff00f0;
     font-family: 'Raleway', sans-serif;
+    margin: auto;
+    margin-bottom: 20px;
   }
 
   li {
@@ -42,7 +62,11 @@ layout: jekyll-theme-minimal
 
   li > a {
     color: black;
-    text-decoration: underline solid red;
+    text-decoration: none;
+  }
+
+  li > a:hover {
+    color: #ff00f0;
   }
 
   #slide-1 {
@@ -54,11 +78,6 @@ layout: jekyll-theme-minimal
     margin-bottom: 50;
   }
 
-  #main-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
   #fancy-design {
       position: absolute;
       top: 50%;
@@ -70,20 +89,22 @@ layout: jekyll-theme-minimal
   }
 
   #hero {
-    width: 100%;
-    height: 50%;
+    display: flex;
     background-color: #fff;
-    padding: 10px;
-  }
+    margin-right: auto;
+    margin-left: auto;
 
-  #overlay {
-    clip-path: polygon(0 100%, 0 0, 100% 0, 30% 50)
   }
 
   #hero p {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 50px;
+  display: inline-block;
+  }
+
+  #overlay {
+    clip-path: polygon(0 100%, 0 0, 100% 0, 30% 50)
   }
 
   #twitter {
@@ -93,6 +114,7 @@ layout: jekyll-theme-minimal
 
   #list {
     list-style: none;
+    margin: auto;
   }
 
   @media only screen
@@ -107,15 +129,16 @@ layout: jekyll-theme-minimal
 
 
 </style>
-<div id='hero'>
-  <p>Hi, I'm Arnold. These are my thoughts.<span><a href="https://twitter.com/Arnold_SandersR">
-    <img src="https://b4thestorm.github.io/pages/assets/images/twitter-logo@logotyp.us.svg" width="50px;" id="twitter"></a></span></p>
+<div class="container">
   <div id='fancy-design'>
   </div>
   <div id='main-container'>
-    <img src="../pages/assets/images/ME.jpg" height="500px">
+    <div id='hero'>
+        <p>Hi, I'm Arnold.<span><a href="https://twitter.com/Arnold_SandersR">
+        <img src="https://b4thestorm.github.io/pages/assets/images/twitter-logo@logotyp.us.svg" width="50px;" id="twitter"></a></span></p>
+    </div>
     <div id="resource-container" style="z-index: 1">
-    <h1 class="header">Projects</h1>
+    <h1 class="topic">Projects</h1>
     <div id="project-container">
       <div class="overlay">
         <div id="slide-1">
@@ -128,7 +151,7 @@ layout: jekyll-theme-minimal
       </div>
     </div>
     <div id="blog-container">
-      <h1 class="header">Blog</h1>
+      <h1 class="topic">Blog</h1>
       <ul id='list'>
         {% for post in site.posts %}
           <li>
