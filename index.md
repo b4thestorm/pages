@@ -15,8 +15,15 @@ layout: jekyll-theme-minimal
 
   gtag('config', 'G-GTLELQLE4F');
 </script>
+<link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.3.0/dist/css/glide.core.min.css">
+<script src="https://unpkg.com/@glidejs/glide@3.3.0/dist/glide.min.js"></script>
+
 </head>
 <style>
+  p , h1 {
+    -webkit-font-smoothing: subpixel-antialiased
+  }
+
  .container {
     display: flex;
     height: 100%;
@@ -46,7 +53,14 @@ layout: jekyll-theme-minimal
   #project-container {
     display: flex;
     flex-direction: row;
-    left: -50;
+    justify-content: center;
+  }
+  .glide {
+    margin-bottom: 40px;
+  }
+  .glide__slide {
+    display: flex;
+    justify-content: center;
   }
 
   .topic {
@@ -67,6 +81,12 @@ layout: jekyll-theme-minimal
 
   li > a:hover {
     color: #ff00f0;
+  }
+
+  .glide__bullets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   #slide-1 {
@@ -121,6 +141,10 @@ layout: jekyll-theme-minimal
   and (min-device-width: 375px)
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2) {
+  .container {
+      width: 400px;
+    }
+
    .hero {
      margin-bottom: 100px;
    }
@@ -140,14 +164,25 @@ layout: jekyll-theme-minimal
     <div id="resource-container" style="z-index: 1">
     <h1 class="topic">Projects</h1>
     <div id="project-container">
-      <div class="overlay">
-        <div id="slide-1">
-          <img src="../pages/assets/images/InstaGarden-LOGO-A.jpg" height="305px"/>
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <img src="../pages/assets/images/InstaGarden-LOGO-A.jpg" height="305px"/>
+            </li>
+            <li class="glide__slide">
+              <img src="../pages/assets/images/proj1_a.png" width="150px;"/>
+            </li>
+            <li class="glide__slide">
+              <img src="../pages/assets/images/proj1_b.png" height="303px" width="150px;"/>
+            </li>
+          </ul>
         </div>
-      </div>
-      <div id="slide-2">
-        <img src="../pages/assets/images/proj1_a.png" width="150px;"/>
-        <img src="../pages/assets/images/proj1_b.png" height="303px" width="150px;"/>
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+          <button class="glide__bullet" data-glide-dir="=0"></button>
+          <button class="glide__bullet" data-glide-dir="=1"></button>
+          <button class="glide__bullet" data-glide-dir="=2"></button>
+        </div>
       </div>
     </div>
     <div id="blog-container">
@@ -163,3 +198,8 @@ layout: jekyll-theme-minimal
   </div>
   </div>
 </div>
+<script>
+  new Glide('.glide', {
+     perView: 1
+  }).mount()
+</script>
