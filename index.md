@@ -21,6 +21,7 @@ layout: jekyll-theme-minimal
 </head>
 <style>
   p , h1 {
+    font-family: 'Raleway';
     -webkit-font-smoothing: subpixel-antialiased
   }
 
@@ -55,6 +56,7 @@ layout: jekyll-theme-minimal
     flex-direction: row;
     justify-content: center;
   }
+
   .glide {
     margin-bottom: 40px;
   }
@@ -108,6 +110,37 @@ layout: jekyll-theme-minimal
       clip-path: polygon(0 0, 0 4%, 100% 50%, 100% 100%, 0 100%, 0% 50%);
   }
 
+  @keyframes slide-in {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
+   @keyframes fade-in {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+
+   @keyframes grow-fast {
+    from {
+      transform: scale(.75);
+    }
+    to {
+      transform: scale(1.5);
+    }
+  }
+
   #hero {
     display: flex;
     background-color: #fff;
@@ -121,16 +154,28 @@ layout: jekyll-theme-minimal
   font-weight: 700;
   font-size: 50px;
   display: inline-block;
-  }
-
-  #overlay {
-    clip-path: polygon(0 100%, 0 0, 100% 0, 30% 50)
+  animation: fade-in 2000ms;
   }
 
   #twitter {
     position: relative;
+    display: inline-block;
     top: 10;
   }
+
+  #twitter:hover {
+    animation: grow-fast 2000ms infinite;
+  }
+
+  .about-me {
+    width: 50%;
+    align-self: center;
+    animation: slide-in 2000ms;
+  }
+
+::selection {
+  background: yellow;
+}
 
   #list {
     list-style: none;
@@ -154,14 +199,19 @@ layout: jekyll-theme-minimal
 
 </style>
 <div class="container">
-  <div id='fancy-design'>
-  </div>
   <div id='main-container'>
     <div id='hero'>
-        <p>Hi, I'm Arnold.<span><a href="https://twitter.com/Arnold_SandersR">
+        <p class='hero-name'>Hi, I'm Arnold.<span><a href="https://twitter.com/Arnold_SandersR">
         <img src="https://b4thestorm.github.io/pages/assets/images/twitter-logo@logotyp.us.svg" width="50px;" id="twitter"></a></span></p>
     </div>
     <div id="resource-container" style="z-index: 1">
+    <div class='about-me'>
+    <p>
+      My name is Arnold Sanders. I am a full stack developer specializing in crafting witty solutions to
+      business problems using modern web technology. At the moment I'm just breaking out on my own, but
+      follow my blog for daily inspiration and work. 
+    </p>
+    </div>
     <h1 class="topic">Projects</h1>
     <div id="project-container">
       <div class="glide">

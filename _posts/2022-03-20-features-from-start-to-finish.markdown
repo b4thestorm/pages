@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 'features from start to finish'
+title: 'Features from start to finish'
 categories: musings
-permalink: /features-from-start-to-finish
+permalink: /Features-from-start-to-finish
 description: learning software engineering at any cost
 ---
 
