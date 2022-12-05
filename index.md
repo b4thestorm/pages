@@ -201,8 +201,7 @@ layout: jekyll-theme-minimal
 <div class="container">
   <div id='main-container'>
     <div id='hero'>
-        <p class='hero-name'>Hi, I'm Arnold.<span><a href="https://twitter.com/Arnold_SandersR">
-        <img src="https://b4thestorm.github.io/pages/assets/images/twitter-logo@logotyp.us.svg" width="50px;" id="twitter"></a></span></p>
+        <p class='hero-name'>Hi, I'm Arnold.</p>
     </div>
     <div id="resource-container" style="z-index: 1">
     <div class='about-me'>
@@ -212,35 +211,12 @@ layout: jekyll-theme-minimal
       follow my blog for daily inspiration and work. 
     </p>
     </div>
-    <h1 class="topic">Projects</h1>
-    <div id="project-container">
-      <div class="glide">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides">
-            <li class="glide__slide">
-              <img src="../pages/assets/images/InstaGarden-LOGO-A.jpg" height="305px"/>
-            </li>
-            <li class="glide__slide">
-              <img src="../pages/assets/images/proj1_a.png" width="150px;"/>
-            </li>
-            <li class="glide__slide">
-              <img src="../pages/assets/images/proj1_b.png" height="303px" width="150px;"/>
-            </li>
-          </ul>
-        </div>
-        <div class="glide__bullets" data-glide-el="controls[nav]">
-          <button class="glide__bullet" data-glide-dir="=0"></button>
-          <button class="glide__bullet" data-glide-dir="=1"></button>
-          <button class="glide__bullet" data-glide-dir="=2"></button>
-        </div>
-      </div>
-    </div>
     <div id="blog-container">
       <h1 class="topic">Blog</h1>
       <ul id='list'>
         {% for post in site.posts %}
           <li>
-            <a href="../pages/{{ post.url }}" id='list-item'>{{ post.title }}</a>
+            <a href="..{{ post.url }}" id='list-item'>{{ post.title }}</a>
           </li>
         {% endfor %}
       </ul>
