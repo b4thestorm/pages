@@ -216,7 +216,7 @@ layout: jekyll-theme-minimal
       <ul id='list'>
         {% for post in site.posts %}
           <li>
-            <a href="..{{ post.url }}" id='list-item'>{{ post.title }}</a>
+            <a href="/pages{{ post.url }}" id='list-item'>{{ post.title }}</a>
           </li>
         {% endfor %}
       </ul>
