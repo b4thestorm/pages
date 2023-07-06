@@ -1,0 +1,57 @@
+---
+layout: post
+title: 'week one packages'
+categories: programming
+permalink: /week-one
+description: 
+---
+
+This week I worked on upgrading packages in a legacy application. I think before this, I hadn't 
+spent much time thinking about the importance of versioning. This upgrading process was quite 
+painful. The below is just a cautionary tale of what happens or could happen if you don't upgrade 
+your shit. 
+
+Issues when upgrading
+* Deprecated methods from Packages
+* Method name changes
+* Full feature reworks
+* features removed
+
+Issues that crop up when updating your packages too late
+
+If you started a project in 2013, and you were using Ember JS package 1.1.10 
+you were locked into those capabilities until 2.0 in 2015. Lets say you decided
+not to upgrade in 2015 and you waited until 2017. Jumping from one major version
+to the next, you may not be screwed because maintainers of the package you rely 
+on was likely rooting for backwards compatibility. So when you updated your version 
+of Ember in 2017, you didn't need to comb through your 50k LOC codebase to change 
+out the ```zip``` method for the ```shiny_new_zip method```. Zip still worked fine. 
+
+But let's say your manager was fired and the new guy was not big on updating things in 2015
+and kept his/her job until 2019. Well by that time when the new boss demanded an upgrade
+for your ember gem, welp, you were screwed. Because while Ember kept backwards compatibility, 
+some dependency of Ember itself decided to lock it's version of Ember to Ember 2.5.0. 
+This made your life now unbearable because well, how do you upgrade a dependency 
+of a package you rely on? The answer:
+• rewrite the code that relies on the package to remove the need for 
+the dependency all together.
+• fork the package and host it in your github account and point to the package from your 
+account outright 
+
+None of these are great solutions and its more likely that the third option will end up 
+being your fate. Effectively, you wouldn't have been able to upgrade passed Ember 2.5.
+
+So we covered method name changes, maintainers having hearts for backwards organizations (lol), 
+and deprecated methods. Another thing that happen's is full feature reworks. Welp lets say 
+you are used to working with function based views to import your view functionality as in say you are working 
+with Django. And then for whatever reason you upgrade to a new version and do not check the 
+Changelog of the new version and randomly the maintainers have decided to create a brand new class 
+based way to make view code. And this new way for whatever half baked reason, is the only 
+way to access the FileUpload API the Django team made available. Welp now you have to figure out 
+how to work with classes to create a new Fileupload system for your Cats'R'us startup. 
+
+Full feature reworks are a pain but when coupled with features removed and placed elsewhere, that's just 
+sadism. And when you are working with legacy code, thats just par for course. Only good thing coming 
+out of the dependency hell you can end up in, is that you will know quite intimitaly how project 
+dependencies have evolved over time. Getting familiar with various package interfaces/apis is a very 
+nice way to start work on a project. Not easy, but certainly nice. 
