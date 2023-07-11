@@ -2,7 +2,7 @@
 layout: post
 title: 'yet another debugging article'
 categories: programming
-permalink: /yada
+permalink: /solve-your-problems
 description: debugging mindset
 ---
 
