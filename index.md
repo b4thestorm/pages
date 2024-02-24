@@ -212,6 +212,9 @@ layout: jekyll-theme-minimal
     </p>
     </div>
     <div id="blog-container">
+      <h1 class="topic">Projects</h1>
+    </div>
+    <div id="blog-container">
       <h1 class="topic">Blog</h1>
       <ul id='list'>
         {% for post in site.posts %}
