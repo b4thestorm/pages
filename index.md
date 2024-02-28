@@ -17,7 +17,7 @@ layout: jekyll-theme-minimal
 </script>
 <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.3.0/dist/css/glide.core.min.css">
 <script src="https://unpkg.com/@glidejs/glide@3.3.0/dist/glide.min.js"></script>
-
+<title>Arnold's Blog</title>
 </head>
 <style>
   p , h1 {

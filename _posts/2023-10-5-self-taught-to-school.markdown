@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Junior to Mid Level (MissionFailed)'
+title: 'Junior to Mid Level'
 categories: programming
 permalink: /junior-to-midlevel
 ---
