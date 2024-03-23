@@ -27,7 +27,6 @@ layout: jekyll-theme-minimal
 
  .container {
     display: flex;
-    height: 100%;
     width: 800px;
     margin: auto;
   }
