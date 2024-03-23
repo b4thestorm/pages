@@ -189,6 +189,16 @@ layout: jekyll-theme-minimal
       width: 400px;
     }
 
+  .project-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-container h1 {
+    text-align: center;
+  } 
+
    .hero {
      margin-bottom: 100px;
    }
