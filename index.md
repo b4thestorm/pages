@@ -214,7 +214,12 @@ layout: jekyll-theme-minimal
       <h1 class="topic">Projects</h1>
       <section>
         <div class="project-container">
-          <img src="{{site.url}}/assets/images/site1.png" width="200px" height="200px">
+        {% if jekyll.environment == "production" %}
+          <img src="{{site.url}}/pages/assets/images/site1.png" width="200px" height="200px">
+        {% else %}
+          <img src="{{site.url}}/assets/images/site1.png" width="200px" height="200px"> 
+        {% endif %}
+          
           <div>
             <h1>FEC</h1>
             <p>An environmental <a href="https://main--animated-jalebi-d8cae2.netlify.app/">services</a> company based in NYS</p>
