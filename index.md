@@ -220,8 +220,9 @@ layout: jekyll-theme-minimal
         {% endif %}
           
           <div>
-            <h1>FEC</h1>
-            <p>An environmental <a href="https://main--animated-jalebi-d8cae2.netlify.app/">services</a> company based in NYS</p>
+            <h1><a href="https://main--animated-jalebi-d8cae2.netlify.app/">FEC</a></h1>
+            <p>An environmental services 
+            company based in NYS</p>
         </div>
         </div>
       </section>
