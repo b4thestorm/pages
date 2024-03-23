@@ -51,10 +51,10 @@ layout: jekyll-theme-minimal
       flex-direction: column;
   }
 
-  #project-container {
+  .project-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
   }
 
   .glide {
@@ -196,7 +196,6 @@ layout: jekyll-theme-minimal
  }
 
 
-
 </style>
 <div class="container">
   <div id='main-container'>
@@ -213,6 +212,15 @@ layout: jekyll-theme-minimal
     </div>
     <div id="blog-container">
       <h1 class="topic">Projects</h1>
+      <section>
+        <div class="project-container">
+          <img src="{{site.url}}/assets/images/site1.png" width="200px" height="200px">
+          <div>
+            <h1>FEC</h1>
+            <p>An environmental <a href="https://main--animated-jalebi-d8cae2.netlify.app/">services</a> company based in NYS</p>
+        </div>
+        </div>
+      </section>
     </div>
     <div id="blog-container">
       <h1 class="topic">Blog</h1>
