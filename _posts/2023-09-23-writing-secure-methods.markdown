@@ -7,7 +7,7 @@ permalink: /secure-programs
 
 Writing code that is secure.
 
-{% highlight python linenos %}
+{% highlight python %}
 def add_message(request, level, message, extra_tags="", fail_silently=False):
     """
     Attempt to add a message to the request using the 'messages' app.
@@ -47,7 +47,7 @@ The else in this case, runs the code we know would not fail but is dependent on 
 
 The alternative would be to do this: 
 
-{% highlight python linenos %}
+{% highlight python %}
 def add_message(request, level, message, extra_tags="", fail_silently=False):
     """
     Attempt to add a message to the request using the 'messages' app.
@@ -67,7 +67,7 @@ It's a good programming practice to enhance readability and allow maintainers to
 Lastly, checkout the raise method calls. Those are really good for enhancing observability and handling unexpected 
 values passed to the method. It halts the function and passes some message to the top level of the program with information about what has occurred. Which is good for observability. Say you wrote this instead:
 
-{% highlight python linenos %}
+{% highlight python %}
 def add_message(request, level, message, extra_tags="", fail_silently=False):
     """
     Attempt to add a message to the request using the 'messages' app.
@@ -84,7 +84,7 @@ While this also works, it has the downside of not reporting anything to the erro
 You'll have to go splunking to find this message in your server logs.
 
 All in all, don't write this:
-{% highlight python linenos %}
+{% highlight python %}
 def add_message(request, level, message, extra_tags="", fail_silently=False):
     try:
         messages = request._messages
@@ -98,7 +98,7 @@ def add_message(request, level, message, extra_tags="", fail_silently=False):
 
 Aim to write this: 
 
-{% highlight python linenos %}
+{% highlight python %}
 def add_message(request, level, message, extra_tags="", fail_silently=False):
     """
     Attempt to add a message to the request using the 'messages' app.
