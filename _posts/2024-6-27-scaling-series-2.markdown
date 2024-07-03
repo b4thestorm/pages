@@ -109,7 +109,7 @@ The entry point to your data center should be a load balancer. Do not user a rou
 and try to remove a server out of rotation, and a client tries to connect and the IP address for the Defunct server is cached by the DNS, your app will not work for clients trying to reach 
 the defunct IP address. 
 
-    PROs: 
+PROs: 
     <strong>Hidden server maintenance:</strong>
     You can take a server out of a load balancer pool, wait for connections to drain and not affect any current clients. 
     <strong>Seamlessly increase capacity:</strong>
