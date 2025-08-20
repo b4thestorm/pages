@@ -224,16 +224,16 @@ layout: jekyll-theme-minimal
       <section>
         <div class="project-container">
         {% if jekyll.environment == "production" %}
-          <img src="{{site.url}}/pages/assets/images/site1.png" width="200px" height="200px">
+          <img src="{{site.url}}/pages/assets/images/site2.png" width="200px" height="200px">
         {% else %}
-          <img src="{{site.url}}/assets/images/site1.png" width="200px" height="200px"> 
+          <img src="{{site.url}}/assets/images/site2.png" width="200px" height="200px"> 
         {% endif %}
           
           <div>
             <h1>CUTZ</h1>
             <p>A Barber Service Admin</p>
-            [Frontend](https://github.com/b4thestorm/cutz-admin)
-            [Backend](https://github.com/b4thestorm/cutz2_api)
+            <a href='https://github.com/b4thestorm/cutz-admin'>Frontend</a>
+            <a href='https://github.com/b4thestorm/cutz2_api'>Backend</a>
         </div>
         </div>
       </section>
